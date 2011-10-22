@@ -9,15 +9,11 @@ class GoCard
   
   def login(card_no, password)
     @mech.get('https://www.seqits.com.au/webtix/welcome/welcome.do/') do |page|
-      # Click the login link
-      #login_page = a.click(page.link_with(:text => /Log In/))
-  
-      # Submit the login form
-  	  page = page.form_with(:action => '/webtix/welcome/welcome.do') do |f|
+      page.form_with(:action => '/webtix/welcome/welcome.do') do |f|
         f['cardOps'] = 'Display' 
         f['cardNum'] = card_no
         f['pass']    = password
-      end.click_button
+      end.click_button # Submit the login form
     end
   end
   
