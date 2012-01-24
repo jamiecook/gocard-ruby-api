@@ -12,6 +12,9 @@ Supports:
 * Get Activity History
 * Logout
 
+## Installation ##
+    gem install go_card
+
 ## Requirements ##
 This API requires the mechanize gem [https://github.com/tenderlove/mechanize], I haven't quite figured out how to bundle this into a gem yet so for now you will have to install it manually: 
 
